@@ -1,11 +1,9 @@
-import metodos.Login;
+import controller.LoginController;
+import view.LoginView;
 
-import javax.swing.*;
-
-public static void main(String[] args) {
-    SwingUtilities.invokeLater(() -> {
-        Login loginFrame = new Login();
-
-        loginFrame.setVisible(true);
-    });
+public class Main {
+    public static void main(String[] args) {
+        LoginView loginFrame = new LoginView(); // Instancia de LoginView
+        LoginController controlLogin = new LoginController(loginFrame); // Pasar loginFrame
+    }
 }
