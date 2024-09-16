@@ -5,16 +5,16 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class LoginView extends JFrame {
-    private JTextField emailField;       // Campo para el correo
-    private JPasswordField passwordField; // Campo para la contraseña
-    private JButton loginButton;        // Botón de login
+    private JTextField emailField;
+    private JPasswordField passwordField;
+    private JButton loginButton;
 
     public LoginView() {
         // Configuración del layout
         setTitle("Login");
-        setLayout(new GridBagLayout()); // Usamos GridBagLayout para mayor control
+        setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
-        constraints.insets = new Insets(10, 10, 10, 10); // Márgenes
+        constraints.insets = new Insets(10, 10, 10, 10);
 
         // Etiquetas y campos de texto
         JLabel emailLabel = new JLabel("Correo:");
@@ -28,11 +28,11 @@ public class LoginView extends JFrame {
         // Configuración de posiciones
         constraints.gridx = 0;
         constraints.gridy = 0;
-        constraints.anchor = GridBagConstraints.EAST; // Alinea las etiquetas a la derecha
+        constraints.anchor = GridBagConstraints.EAST;
         add(emailLabel, constraints);
 
         constraints.gridx = 1;
-        constraints.anchor = GridBagConstraints.WEST; // Alinea los campos a la izquierda
+        constraints.anchor = GridBagConstraints.WEST;
         add(emailField, constraints);
 
         constraints.gridx = 0;
@@ -55,17 +55,15 @@ public class LoginView extends JFrame {
         setVisible(true);
     }
 
-    // Método para añadir ActionListener al botón de login
     public void addLoginListener(ActionListener listener) {
         loginButton.addActionListener(listener);
     }
 
-    // Métodos para obtener los datos ingresados
     public String getEmail() {
         return emailField.getText();
     }
 
     public String getPassword() {
-        return new String(passwordField.getPassword()); // Convertir el char[] a String
+        return new String(passwordField.getPassword());
     }
 }
