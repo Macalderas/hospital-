@@ -1,99 +1,69 @@
 package view;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
+public class LoginView extends JFrame {
+    private JTextField emailField;
+    private JPasswordField passwordField;
+    private JButton loginButton;
 
+    public LoginView() {
+        // Configuración del layout
+        setTitle("Login");
+        setLayout(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.insets = new Insets(10, 10, 10, 10);
 
-public class doctorView extends  JFrame {
+        // Etiquetas y campos de texto
+        JLabel emailLabel = new JLabel("Correo:");
+        emailField = new JTextField(20);
 
-    // Atributo pantalla que contiene las dimensiones de la ventana
-    private int[] pantalla = {1300, 800};
+        JLabel passwordLabel = new JLabel("Contraseña:");
+        passwordField = new JPasswordField(20);
 
-    public doctorView() {
-<<<<<<< HEAD
-=======
-public class doctorView  extends JFrame{
+        loginButton = new JButton("Iniciar sesión");
 
+        // Configuración de posiciones
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.anchor = GridBagConstraints.EAST;
+        add(emailLabel, constraints);
 
-    // Atributo pantalla que contiene las dimensiones de la ventana
-    private int[] pantalla = {1300, 800};
+        constraints.gridx = 1;
+        constraints.anchor = GridBagConstraints.WEST;
+        add(emailField, constraints);
 
-    public doctorView () {
->>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
-=======
->>>>>>> 1ab41b0 (ultimos cambios)
-        // Configura las dimensiones del JFrame usando el array pantalla
-        setTitle("Perfil del Doctor");
-        setSize(pantalla[0], pantalla[1]);
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        constraints.anchor = GridBagConstraints.EAST;
+        add(passwordLabel, constraints);
+
+        constraints.gridx = 1;
+        constraints.anchor = GridBagConstraints.WEST;
+        add(passwordField, constraints);
+
+        constraints.gridx = 1;
+        constraints.gridy = 2;
+        constraints.anchor = GridBagConstraints.CENTER;
+        add(loginButton, constraints);
+
+        // Configuración del frame
+        setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setLayout(new BorderLayout());
-
-        // Crear el panel headerPanel
-        JPanel headerPanel = new JPanel();
-        headerPanel.setPreferredSize(new Dimension(1300, 60));
-        headerPanel.setBackground(Color.DARK_GRAY);
-        headerPanel.setLayout(new BorderLayout());
-
-        // Crear JLabel para el nombre del hospital y colocarlo en el lado izquierdo
-        JLabel hospitalLabel = new JLabel("Hospital Santa Catalina");
-        hospitalLabel.setForeground(Color.WHITE);
-        hospitalLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        headerPanel.add(hospitalLabel, BorderLayout.WEST);
-
-        // Crear el panel userPanel con GridBagLayout
-        JPanel userPanel = new JPanel(new GridBagLayout());
-        userPanel.setBackground(Color.DARK_GRAY);
-
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.insets = new Insets(0, 10, 0, 10);
-
-        // Panel para el logo (puedes insertar un componente gráfico o imagen aquí)
-        JPanel logoPanel = new JPanel();
-        logoPanel.setBackground(Color.YELLOW);  // Representación simple de un logo con color
-<<<<<<< HEAD
->>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
-=======
->>>>>>> 1ab41b0 (ultimos cambios)
-        logoPanel.setPreferredSize(new Dimension(40, 40));
-        userPanel.add(logoPanel, gbc);
-
-        // Etiqueta para el nombre del doctor
-        gbc.gridx = 1;
-        JLabel nameLabel = new JLabel("Mynor Calderas");
-        nameLabel.setForeground(Color.WHITE);
-        nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        userPanel.add(nameLabel, gbc);
-
-        // Etiqueta para la especialidad del doctor
-        gbc.gridy = 1;
-        JLabel titleLabel = new JLabel("Doctor General");
-        titleLabel.setForeground(Color.WHITE);
-        titleLabel.setFont(new Font("Arial", Font.PLAIN, 12));
-        userPanel.add(titleLabel, gbc);
-
-        // Añadir el userPanel al lado derecho del headerPanel
-        headerPanel.add(userPanel, BorderLayout.EAST);
-
-        // Añadir el panel superior a la ventana
-        add(headerPanel, BorderLayout.NORTH);
+        setVisible(true);
     }
 
-    public static void main(String[] args) {
-        // Crear y mostrar la ventana
-        SwingUtilities.invokeLater(() -> {
-            doctorView frame = new doctorView();
-            frame.setVisible(true);
-        });
+    public void addLoginListener(ActionListener listener) {
+        loginButton.addActionListener(listener);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+    public String getEmail() {
+        return emailField.getText();
+    }
+
+    public String getPassword() {
+        return new String(passwordField.getPassword());
+    }
 }
-=======
-}
->>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
-=======
-}
->>>>>>> 1ab41b0 (ultimos cambios)
