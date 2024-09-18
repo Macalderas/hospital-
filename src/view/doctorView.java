@@ -1,5 +1,8 @@
 package view;
+import javax.swing.*;
+import java.awt.*;
 
+<<<<<<< HEAD
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,6 +11,15 @@ public class doctorView extends  JFrame {
     private int[] pantalla = {1300, 800};
 
     public doctorView() {
+=======
+public class doctorView  extends JFrame{
+
+
+    // Atributo pantalla que contiene las dimensiones de la ventana
+    private int[] pantalla = {1300, 800};
+
+    public doctorView () {
+>>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
         // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
@@ -38,7 +50,11 @@ public class doctorView extends  JFrame {
 
         // Panel para el logo (puedes insertar un componente gráfico o imagen aquí)
         JPanel logoPanel = new JPanel();
+<<<<<<< HEAD
         logoPanel.setBackground(Color.cyan);  // Representación simple de un logo con color
+=======
+        logoPanel.setBackground(Color.YELLOW);  // Representación simple de un logo con color
+>>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
         logoPanel.setPreferredSize(new Dimension(40, 40));
         userPanel.add(logoPanel, gbc);
 
@@ -70,4 +86,8 @@ public class doctorView extends  JFrame {
             frame.setVisible(true);
         });
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
