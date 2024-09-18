@@ -1,13 +1,14 @@
 package view;
 import javax.swing.*;
-import java.awt.*;
+import java.awt.*;z
+import java.util.HashMap;
 
-public class doctorView extends JFrame{
+public class doctorView extends JFrame {
 
     // Atributo pantalla que contiene las dimensiones de la ventana
     private int[] pantalla = {1300, 800};
 
-    public doctorView() {
+    public doctorView(HashMap<String, String> datosDoctor) {
         // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
@@ -44,14 +45,14 @@ public class doctorView extends JFrame{
 
         // Etiqueta para el nombre del doctor
         gbc.gridx = 1;
-        JLabel nameLabel = new JLabel("Doctor Simi");
+        JLabel nameLabel = new JLabel(datosDoctor.get("nombre")); // Usar el valor del HashMap
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
         userPanel.add(nameLabel, gbc);
 
         // Etiqueta para la especialidad del doctor
         gbc.gridy = 1;
-        JLabel titleLabel = new JLabel("Doctor General");
+        JLabel titleLabel = new JLabel(datosDoctor.get("titulo")); // Usar el valor del HashMap
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         userPanel.add(titleLabel, gbc);
@@ -64,9 +65,14 @@ public class doctorView extends JFrame{
     }
 
     public static void main(String[] args) {
+        // Crear un HashMap con los datos del doctor
+        HashMap<String, String> datosDoctor = new HashMap<>();
+        datosDoctor.put("nombre", "Doctor Simi");
+        datosDoctor.put("titulo", "Doctor General");
+
         // Crear y mostrar la ventana
         SwingUtilities.invokeLater(() -> {
-            doctorView frame = new doctorView();
+            doctorView frame = new doctorView(datosDoctor);
             frame.setVisible(true);
         });
     }
