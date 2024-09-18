@@ -1,6 +1,6 @@
 package view;
 import javax.swing.*;
-import java.awt.*;z
+import java.awt.*;
 import java.util.HashMap;
 
 public class doctorView extends JFrame {
