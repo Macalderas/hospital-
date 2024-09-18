@@ -2,26 +2,12 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-
-
-public class doctorView extends  JFrame {
+public class doctorView extends JFrame{
 
     // Atributo pantalla que contiene las dimensiones de la ventana
     private int[] pantalla = {1300, 800};
 
     public doctorView() {
-<<<<<<< HEAD
-=======
-public class doctorView  extends JFrame{
-
-
-    // Atributo pantalla que contiene las dimensiones de la ventana
-    private int[] pantalla = {1300, 800};
-
-    public doctorView () {
->>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
-=======
->>>>>>> 1ab41b0 (ultimos cambios)
         // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
@@ -53,16 +39,12 @@ public class doctorView  extends JFrame{
         // Panel para el logo (puedes insertar un componente gráfico o imagen aquí)
         JPanel logoPanel = new JPanel();
         logoPanel.setBackground(Color.YELLOW);  // Representación simple de un logo con color
-<<<<<<< HEAD
->>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
-=======
->>>>>>> 1ab41b0 (ultimos cambios)
         logoPanel.setPreferredSize(new Dimension(40, 40));
         userPanel.add(logoPanel, gbc);
 
         // Etiqueta para el nombre del doctor
         gbc.gridx = 1;
-        JLabel nameLabel = new JLabel("Mynor Calderas");
+        JLabel nameLabel = new JLabel("Doctor Simi");
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
         userPanel.add(nameLabel, gbc);
@@ -88,12 +70,4 @@ public class doctorView  extends JFrame{
             frame.setVisible(true);
         });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ba97db9 (Mis cambios en la rama de trabajo)
-=======
-}
->>>>>>> 1ab41b0 (ultimos cambios)
