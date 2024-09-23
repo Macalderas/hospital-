@@ -66,14 +66,47 @@ public class doctorView extends JFrame {
 
     public static void main(String[] args) {
         // Crear un HashMap con los datos del doctor
-        HashMap<String, String> datosDoctor = new HashMap<>();
+        HashMap<String, String> menu = new HashMap<>();
         datosDoctor.put("nombre", "Doctor Simi");
         datosDoctor.put("titulo", "Doctor General");
 
         // Crear y mostrar la ventana
         SwingUtilities.invokeLater(() -> {
-            doctorView frame = new doctorView(datosDoctor);
+            doctorView frame = new doctorView(menu);
             frame.setVisible(true);
         });
     }
 }
+
+  private JPanel componentMenuLateral (){
+    JPanel menuPanel = new JPanel();
+    menu.setPreferredSize(new Dimension( 250,pantalla[1]));
+    menu.setBackground(Color.darkGray);
+
+    JPanel menu = new JPanel();
+    menu.setLayout(new GridLayout(5,1));
+    menu.setBackground(Color.green);
+
+GridBagConstraints gbc = new GridBagConstraints();
+gbc.fill = GridBagConstraints.HORIZONTAL;
+gbc.gridx = 0;
+
+      menu.add(op("opcion1"),gbc);
+      menu.add(op("opcion2"),gbc);
+      menu.add(op("opcion3"),gbc);
+      menu.add(op("opcion4"),gbc);
+      menu.add(op("opcion5"),gbc);
+
+      return  menuPanel;
+        }
+
+        private JButton op (String texto) {
+       JButton op  = new JButton(texto);
+
+       op.addActionListener(e -> {
+           System.out.println(texto);
+       });
+           return op;
+
+
+        }
