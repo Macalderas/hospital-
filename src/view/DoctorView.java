@@ -4,11 +4,9 @@ import java.awt.*;
 import java.util.HashMap;
 
 public class DoctorView extends JFrame{
-    // Atributo pantalla que contiene las dimensiones de la ventana
     private int[] pantalla = {1300, 800};
 
     public DoctorView(HashMap<String, String> datosDoctor) { 
-        // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,7 +31,7 @@ public class DoctorView extends JFrame{
         gbc.insets = new Insets(0, 10, 0, 10);
 
         JPanel logoPanel = new JPanel();
-        logoPanel.setBackground(Color.YELLOW);  // Representación simple de un logo con color
+        logoPanel.setBackground(Color.YELLOW);  
         logoPanel.setPreferredSize(new Dimension(40, 40));
         userPanel.add(logoPanel, gbc);
 
