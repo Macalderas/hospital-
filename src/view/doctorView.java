@@ -10,13 +10,11 @@ public class LoginView extends JFrame {
     private JButton loginButton;
 
     public LoginView() {
-        // Configuración del layout
         setTitle("Login");
         setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.insets = new Insets(10, 10, 10, 10);
 
-        // Etiquetas y campos de texto
         JLabel emailLabel = new JLabel("Correo:");
         emailField = new JTextField(20);
 
