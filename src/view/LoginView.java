@@ -10,7 +10,6 @@ public class LoginView extends JFrame {
     private JButton loginButton;
 
     public LoginView() {
-        // Configuración del layout
         setTitle("Login");
         setLayout(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
