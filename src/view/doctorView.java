@@ -5,24 +5,20 @@ import java.util.HashMap;
 
 public class doctorView extends JFrame {
 
-    // Atributo pantalla que contiene las dimensiones de la ventana
     private int[] pantalla = {1300, 800};
 
     public doctorView(HashMap<String, String> datosDoctor) {
-        // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Crear el panel headerPanel
         JPanel headerPanel = new JPanel();
         headerPanel.setPreferredSize(new Dimension(1300, 60));
         headerPanel.setBackground(Color.DARK_GRAY);
         headerPanel.setLayout(new BorderLayout());
 
-        // Crear JLabel para el nombre del hospital y colocarlo en el lado izquierdo
         JLabel hospitalLabel = new JLabel("Hospital Santa Catalina");
         hospitalLabel.setForeground(Color.WHITE);
         hospitalLabel.setFont(new Font("Arial", Font.BOLD, 16));
@@ -43,34 +39,28 @@ public class doctorView extends JFrame {
         logoPanel.setPreferredSize(new Dimension(40, 40));
         userPanel.add(logoPanel, gbc);
 
-        // Etiqueta para el nombre del doctor
         gbc.gridx = 1;
         JLabel nameLabel = new JLabel(datosDoctor.get("nombre")); // Usar el valor del HashMap
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
         userPanel.add(nameLabel, gbc);
 
-        // Etiqueta para la especialidad del doctor
         gbc.gridy = 1;
-        JLabel titleLabel = new JLabel(datosDoctor.get("titulo")); // Usar el valor del HashMap
+        JLabel titleLabel = new JLabel(datosDoctor.get("titulo"));
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         userPanel.add(titleLabel, gbc);
 
-        // Añadir el userPanel al lado derecho del headerPanel
         headerPanel.add(userPanel, BorderLayout.EAST);
 
-        // Añadir el panel superior a la ventana
         add(headerPanel, BorderLayout.NORTH);
     }
 
     public static void main(String[] args) {
-        // Crear un HashMap con los datos del doctor
         HashMap<String, String> datosDoctor = new HashMap<>();
         datosDoctor.put("nombre", "Doctor Simi");
         datosDoctor.put("titulo", "Doctor General");
 
-        // Crear y mostrar la ventana
         SwingUtilities.invokeLater(() -> {
             doctorView frame = new doctorView(datosDoctor);
             frame.setVisible(true);
