@@ -15,7 +15,6 @@ public class LoginView extends JFrame {
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.insets = new Insets(10, 10, 10, 10);
 
-        // Etiquetas y campos de texto
         JLabel emailLabel = new JLabel("Correo:");
         emailField = new JTextField(20);
 
@@ -24,7 +23,6 @@ public class LoginView extends JFrame {
 
         loginButton = new JButton("Iniciar sesión");
 
-        // Configuración de posiciones
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.anchor = GridBagConstraints.EAST;
@@ -48,7 +46,6 @@ public class LoginView extends JFrame {
         constraints.anchor = GridBagConstraints.CENTER;
         add(loginButton, constraints);
 
-        // Configuración del frame
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
