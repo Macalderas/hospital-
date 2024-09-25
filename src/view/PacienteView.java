@@ -67,7 +67,7 @@ public class PacienteView {
     }
 
     public String getFechaNacimiento() {
-        return fechaNacimiento; 
+        return fechaNacimiento;
     }
 
     public String getHorarioCita() {
