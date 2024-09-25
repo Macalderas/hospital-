@@ -8,7 +8,6 @@ public class Main {
         UsuarioService usuarioService = new UsuarioService();
         LoginView loginView = new LoginView();
 
-        // Crear instancia de LoginController
         new LoginController(loginView, usuarioService);
     }
 }

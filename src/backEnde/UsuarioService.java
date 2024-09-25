@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class UsuarioService {
 
-    // Base de datos simulada con especialidades
     private static final Map<String, UsuarioInfo> BASE_DE_DATOS = new HashMap<>();
 
     static {
@@ -35,7 +34,6 @@ public class UsuarioService {
         return resultado;
     }
 
-    // Clase interna para almacenar la información del usuario
     private static class UsuarioInfo {
         private String contraseña;
         private String especialidad;

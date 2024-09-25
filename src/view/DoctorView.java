@@ -4,11 +4,9 @@ import java.awt.*;
 import java.util.HashMap;
 
 public class DoctorView extends JFrame{
-    // Atributo pantalla que contiene las dimensiones de la ventana
     private int[] pantalla = {1300, 800};
 
     public DoctorView(HashMap<String, String> datosDoctor) {
-        // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,18 +31,18 @@ public class DoctorView extends JFrame{
         gbc.insets = new Insets(0, 10, 0, 10);
 
         JPanel logoPanel = new JPanel();
-        logoPanel.setBackground(Color.YELLOW);  // Representación simple de un logo con color
+        logoPanel.setBackground(Color.YELLOW);
         logoPanel.setPreferredSize(new Dimension(40, 40));
         userPanel.add(logoPanel, gbc);
 
         gbc.gridx = 1;
-        JLabel nameLabel = new JLabel(datosDoctor.get("nombre")); // Usar el valor del HashMap
+        JLabel nameLabel = new JLabel(datosDoctor.get("nombre"));
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
         userPanel.add(nameLabel, gbc);
 
         gbc.gridy = 1;
-        JLabel titleLabel = new JLabel(datosDoctor.get("titulo")); // Usar el valor del HashMap
+        JLabel titleLabel = new JLabel(datosDoctor.get("titulo"));
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         userPanel.add(titleLabel, gbc);

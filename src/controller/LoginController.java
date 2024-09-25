@@ -14,7 +14,6 @@ public class LoginController {
         this.loginView = loginView;
         this.usuarioService = usuarioService;
 
-        // Listener para el botón de login
         this.loginView.addLoginListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -24,14 +23,11 @@ public class LoginController {
     }
 
     private void controlDelLogin() {
-        // Obtener datos del formulario
         String usuario = loginView.getEmail();
         String contraseña = loginView.getPassword();
 
-        // Validar datos
         Map<String, String> resultado = usuarioService.validarDatos(usuario, contraseña);
 
-        // Imprimir la información retornada por consola
         for (Map.Entry<String, String> entry : resultado.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
