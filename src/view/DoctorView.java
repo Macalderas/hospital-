@@ -7,7 +7,7 @@ public class DoctorView extends JFrame{
     // Atributo pantalla que contiene las dimensiones de la ventana
     private int[] pantalla = {1300, 800};
 
-    public DoctorView(HashMap<String, String> datosDoctor) { 
+    public DoctorView(HashMap<String, String> datosDoctor) {
         // Configura las dimensiones del JFrame usando el array pantalla
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
