@@ -74,11 +74,14 @@ public class DoctorView extends JFrame{
         menu.setLayout(new GridLayout(5, 1));
         menu.setBackground(Color.GREEN);
 
-        menu.add(op("Opción 1"));
-        menu.add(op("Opción 2"));
-        menu.add(op("Opción 3"));
-        menu.add(op("Opción 4"));
-        menu.add(op("Opción 5"));
+        menu.add(op("Consultas Del Día"));
+        menu.add(op("Salas"));
+        menu.add(op("Farmacia"));
+        menu.add(op("Pacientes registrados"));
+        menu.add(op("Citar en otra area" +
+                "" +
+                "" +
+                "0"));
 
         menuPanel.add(menu);
         return menuPanel;
