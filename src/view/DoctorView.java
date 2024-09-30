@@ -78,10 +78,7 @@ public class DoctorView extends JFrame{
         menu.add(op("Salas"));
         menu.add(op("Farmacia"));
         menu.add(op("Pacientes registrados"));
-        menu.add(op("Citar en otra area" +
-                "" +
-                "" +
-                "0"));
+        menu.add(op("Citar en otra area"));
 
         menuPanel.add(menu);
         return menuPanel;
