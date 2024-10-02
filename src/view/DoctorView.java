@@ -12,7 +12,6 @@ public class DoctorView {
     private JPanel panelSalas;
 
     public DoctorView() {
-        // Inicializa el botón de salas
         botonSalas = new JButton("Salas");
         tablaPacientes = new JPanel(); // Simulando la tabla de pacientes
         panelSalas = new SalasView(new DataSalas()).crearGrid(); // Crea el panel de salas
@@ -25,7 +24,6 @@ public class DoctorView {
             }
         });
 
-        // Agrega el botón a la vista
         JFrame frame = new JFrame();
         frame.setLayout(new BorderLayout());
         frame.add(botonSalas, BorderLayout.NORTH);
