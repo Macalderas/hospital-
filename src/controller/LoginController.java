@@ -23,7 +23,6 @@ public class LoginController {
     }
 
     private void controlDelLogin() {
-        // Obtener datos del formulario
         String usuario = loginView.getEmail();
         String contraseña = loginView.getPassword();
 
