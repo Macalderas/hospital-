@@ -12,11 +12,9 @@ public class DataFarmacia {
     public DataFarmacia() {
         medicamentos = new ArrayList<>();
         cargarDatos();
-        // Invertimos la lista después de haber cargado los medicamentos
         Collections.reverse(medicamentos);
     }
 
-    // Método para cargar datos de medicamentos
     private void cargarDatos() {
         medicamentos.add(new Medicamento("Paracetamol", "Tableta", "500mg", "Paracetamol",
                 LocalDate.of(2025, 5, 10), "Lote123", 4.99, "Alivio de dolor leve y fiebre", "Hipersensibilidad"));
@@ -92,7 +90,6 @@ public class DataFarmacia {
                 LocalDate.of(2024, 4, 17), "Lote343", 5.25, "Ansiedad, trastornos de pánico", "Insuficiencia respiratoria severa"));
     }
 
-    // Método para obtener la lista de medicamentos
     public List<Medicamento> getMedicamentos() {
         return medicamentos;
     }
