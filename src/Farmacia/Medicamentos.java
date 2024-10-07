@@ -3,7 +3,6 @@ package Farmacia;
 import java.time.LocalDate;
 
 public class Medicamentos {
-    // Atributos privados
     private String nombre;
     private String formaFarmaceutica;
     private String dosis;
@@ -14,10 +13,8 @@ public class Medicamentos {
     private String indicaciones;
     private String contraindicaciones;
 
-    // Constructor vacío
     public void Medicamento() {}
 
-    // Constructor con todos los parámetros
     public void Medicamento(String nombre, String formaFarmaceutica, String dosis, String principioActivo, LocalDate fechaCaducidad,
                             String numeroLote, double precio, String indicaciones, String contraindicaciones) {
         this.nombre = nombre;
@@ -31,7 +28,6 @@ public class Medicamentos {
         this.contraindicaciones = contraindicaciones;
     }
 
-    // Métodos de encapsulamiento (getters y setters)
 
     public String getNombre() {
         return nombre;
