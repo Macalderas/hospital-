@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-class LoginView extends JFrame {
+public class LoginView extends JFrame {
     private JTextField emailField;
     private JPasswordField passwordField;
     private JButton loginButton;
