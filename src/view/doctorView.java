@@ -24,23 +24,25 @@ public class doctorView extends JFrame {
         hospitalLabel.setFont(new Font("Arial", Font.BOLD, 16));
         headerPanel.add(hospitalLabel, BorderLayout.WEST);
 
-        // Crear el panel userPanel con GridBagLayout
         JPanel userPanel = new JPanel(new GridBagLayout());
         userPanel.setBackground(Color.DARK_GRAY);
+Estimado Profesor Jossue Fuentes,
 
+Espero que se encuentre bien. Le escribo para solicitar, de manera atenta, que pueda revisar los ejercicios y pruebas que he presentado en la plataforma. He notado que algunos de ellos tienen un puntaje bajo, y me gustaría saber si existe la posibilidad de corregirlos o recibir alguna retroalimentación sobre los errores cometidos.
+
+Agradezco de antemano su atención y quedo a la espera de su respuesta.
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(0, 10, 0, 10);
 
-        // Panel para el logo (puedes insertar un componente gráfico o imagen aquí)
         JPanel logoPanel = new JPanel();
-        logoPanel.setBackground(Color.YELLOW);  // Representación simple de un logo con color
+        logoPanel.setBackground(Color.YELLOW);  
         logoPanel.setPreferredSize(new Dimension(40, 40));
         userPanel.add(logoPanel, gbc);
 
         gbc.gridx = 1;
-        JLabel nameLabel = new JLabel(datosDoctor.get("nombre")); // Usar el valor del HashMap
+        JLabel nameLabel = new JLabel(datosDoctor.get("nombre"));
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
         userPanel.add(nameLabel, gbc);
